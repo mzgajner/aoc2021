@@ -1,5 +1,5 @@
 export default (lines: string[]) => {
-  const lineLength = lines[0].length
+  const lineLength = lines[0].length;
   const counts = new Array(lineLength).fill(0);
 
   lines.forEach((line) => {

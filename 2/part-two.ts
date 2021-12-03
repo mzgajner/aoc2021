@@ -17,7 +17,7 @@ function processMovements(movements: Movement[]): [number, number] {
   movements.forEach((movement) => {
     if (movement.direction === Direction.Forward) {
       position += movement.value;
-      depth += aim * movement.value
+      depth += aim * movement.value;
     } else if (movement.direction === Direction.Down) {
       aim += movement.value;
     } else if (movement.direction === Direction.Up) {
@@ -29,12 +29,12 @@ function processMovements(movements: Movement[]): [number, number] {
 }
 
 export default (lines: string[]) => {
-  const movements:Movement[] = lines.map((line) => {
+  const movements: Movement[] = lines.map((line) => {
     const [direction, stringValue] = line.split(" ");
-    const value = Number(stringValue)
+    const value = Number(stringValue);
 
-    return {direction: direction as Direction, value}
+    return { direction: direction as Direction, value };
   });
   const [position, depth] = processMovements(movements);
-  return position * depth
+  return position * depth;
 };
