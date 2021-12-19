@@ -7,5 +7,6 @@
   "deno.codeLens.referencesAllFunctions": false,
   "deno.suggest.imports.hosts": {
     "https://deno.land": false
-  }
+  },
+  "deno.unstable": true
 }
